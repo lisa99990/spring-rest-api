@@ -8,12 +8,12 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name="Blog") // to make table name different from class name
+@Table(name = "Blog") // to make table name different from class name
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Column(name="title")
+    @Column(name = "title")
     private String title;
     private String content;
 
@@ -22,6 +22,7 @@ public class Blog {
         this.setTitle(title);
         this.setContent(content);
     }
+
     public Blog(String title, String content) {
         this.setTitle(title);
         this.setContent(content);
